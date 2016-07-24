@@ -1,5 +1,7 @@
 # Transit
 
+[![Join the chat at https://gitter.im/jsonmaur/transit](https://badges.gitter.im/jsonmaur/transit.svg)](https://gitter.im/jsonmaur/transit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/jsonmaur/transit.svg?branch=master)](https://travis-ci.org/jsonmaur/transit)
 [![Coverage Status](https://coveralls.io/repos/github/jsonmaur/transit/badge.svg?branch=master)](https://coveralls.io/github/jsonmaur/transit?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
