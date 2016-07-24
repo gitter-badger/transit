@@ -7,6 +7,7 @@ import envify from 'envify/custom'
 import uglifyify from 'uglifyify'
 import archiver from 'archiver'
 import config from '../utils/config'
+import { log } from '../utils/emit'
 
 export default async function (argv) {
   const funcs = argv._.slice(1)
@@ -22,7 +23,7 @@ export default async function (argv) {
     const outputFile = `${path.resolve(config().bundlesDir, path.basename(func))}.zip`
     await bundle(handler, outputFile)
 
-    console.log(`${chalk.yellow(func)} was built`)
+    log(`${chalk.yellow(func)} was built`)
   }))
 }
 
