@@ -40,7 +40,7 @@ export async function setupConfig (argv) {
   const envFileExists = await fs.exists(baseConfig.envFile)
   if (envFileExists) {
     baseConfig.env = await fs.readJson(baseConfig.envFile)
-  } else if (!envFileExists && !baseConfig.envFile.match(new RegExp(`/env.json$`))) {
+  } else if (!envFileExists && !baseConfig.envFile.match(/\/env.json$/)) {
     throw new Error(`"${baseConfig.envFile}" was not found`)
   }
 }

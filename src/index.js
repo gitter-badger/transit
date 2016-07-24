@@ -1,5 +1,4 @@
 import minimist from 'minimist'
-import chalk from 'chalk'
 import { error } from './utils/emit'
 import { setupConfig } from './utils/config'
 import pkg from '../package.json'
