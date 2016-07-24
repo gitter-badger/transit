@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+DIR="$(dirname "$( cd $(dirname $0) ; pwd -P )")"
+BIN=$DIR/node_modules/.bin
+
+$BIN/zoo NODE_ENV=testing \
+$BIN/mocha \
+  --compilers js:babel-register \
+  --reporter dot \
+  $@

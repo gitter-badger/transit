@@ -9,24 +9,32 @@
     "type": "git",
     "url": "git+https://github.com/jsonmaur/bunda.git"
   },
-  "engines": {},
+  "engines": {
+    "node": ">=4"
+  },
   "keywords": [],
-  "files": [],
+  "files": [
+    "assets/",
+    "bin/",
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
   "main": "",
   "bin": {
     "bunda": "bin/bunda"
   },
   "scripts": {
     "test:lint": "standard --verbose | snazzy",
-    "test:unit": "nyc --all -- mocha src/**/*.test.js --compilers js:babel-register --reporter dot",
-    "test:integration": "zoo NODE_ENV=testing mocha test/**/*.js --compilers js:babel-register --reporter dot",
+    "test:unit": "nyc -a -- scripts/test src/**/*.test.js",
+    "test:integration": "scripts/test test/**/*.js",
     "test:coverage": "nyc report -r=lcov",
     "test": "rm -rf coverage .nyc_output && npm-run-all test:*",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "mocha": "mocha --compilers js:babel-register",
     "build": "rm -rf lib && babel src -d lib --ignore '**/*.test.js'",
+    "build:min": "npm run build -- --no-comments --compact --minified",
     "watch": "npm run build -- -w",
-    "prepublish": "npm run build -- --compact --minified"
+    "prepublish": "npm run build:min"
   },
   "devDependencies": {
     "babel-cli": "6.11.4",
