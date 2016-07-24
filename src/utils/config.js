@@ -1,6 +1,5 @@
 import path from 'path'
 import fs from 'fs-promise'
-import crypto from 'crypto-extra'
 import deepAssign from 'deep-assign'
 import { ensureJson } from './common'
 
@@ -27,7 +26,7 @@ export async function setupConfig (argv) {
   await fs.ensureDir(baseConfig.bundlesDir)
   // await ensureJson(baseConfig.resourcesFile, {})
   await ensureJson(baseConfig.metadataFile, {
-    appName: pkg.name || `bunda-${crypto.randomString(7)}`,
+    appName: pkg.name || `bunda-${Math.floor((Math.random() * 99999) + 10000)}`,
     stackCreated: false
   })
 
