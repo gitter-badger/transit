@@ -1,6 +1,6 @@
 # Bunda
 
-Bundles functions for use in AWS Lambda or other cloud code providers.
+A serverless web framework for Node and AWS Lambda.
 
 > Under development, docs coming soon!
 
