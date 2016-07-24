@@ -1,6 +1,7 @@
 import path from 'path'
 import fs from 'fs-promise'
 import { meta } from '../utils/config'
+import { log } from '../utils/emit'
 import { cloudFormation } from '../utils/aws'
 
 export default async function (argv) {
@@ -13,7 +14,9 @@ export default async function (argv) {
 
   const CF = cloudFormation()
 
-  const StackName = `bunda--${await meta.get('appName')}`
+  log('Creating AWS Resources (this may take awhile)')
+
+  const StackName = `bunda-${await meta.get('appName')}`
   const TemplateBody = JSON.stringify(template)
 
   await CF.createStack({
@@ -23,4 +26,6 @@ export default async function (argv) {
 
   await meta.set('stackCreated', true)
   await CF.waitFor('stackCreateComplete', { StackName }).promise()
+
+  log('Resources created!')
 }
