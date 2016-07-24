@@ -7,7 +7,7 @@ export default async function (argv) {
 
   log('Destroying AWS Resources (this may take awhile)')
 
-  const StackName = `bunda--${await meta.get('appName')}`
+  const StackName = `transit-${await meta.get('appName')}`
   await CF.deleteStack({ StackName }).promise()
 
   await meta.set('stackCreated', false)

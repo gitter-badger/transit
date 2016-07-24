@@ -16,7 +16,7 @@ export default async function (argv) {
 
   log('Creating AWS Resources (this may take awhile)')
 
-  const StackName = `bunda-${await meta.get('appName')}`
+  const StackName = `transit-${await meta.get('appName')}`
   const TemplateBody = JSON.stringify(template)
 
   await CF.createStack({

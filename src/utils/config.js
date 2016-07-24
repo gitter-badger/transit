@@ -4,9 +4,9 @@ import deepAssign from 'deep-assign'
 import { ensureJson } from './common'
 
 let baseConfig = {
-  bundlesDir: path.resolve('.bunda/bundles'),
-  metadataFile: path.resolve('.bunda/metadata.json'),
-  // resourcesFile: path.resolve('.bunda/resources.json'),
+  bundlesDir: path.resolve('.transit/bundles'),
+  metadataFile: path.resolve('.transit/metadata.json'),
+  // resourcesFile: path.resolve('.transit/resources.json'),
   envFile: path.resolve('env.json'),
   env: {},
   babel: {},
@@ -20,13 +20,13 @@ export async function setupConfig (argv) {
   const pkgFile = path.resolve('package.json')
   const pkg = await fs.exists(pkgFile)
     ? await fs.readJson(pkgFile, 'utf8') : {}
-  deepAssign(baseConfig, pkg.bunda)
+  deepAssign(baseConfig, pkg.transit)
 
   /* ensure defaults for stuff */
   await fs.ensureDir(baseConfig.bundlesDir)
   // await ensureJson(baseConfig.resourcesFile, {})
   await ensureJson(baseConfig.metadataFile, {
-    appName: pkg.name || `bunda-${Math.floor((Math.random() * 99999) + 10000)}`,
+    appName: pkg.name || `transit-${Math.floor((Math.random() * 99999) + 10000)}`,
     stackCreated: false
   })
 

@@ -1,7 +1,7 @@
-# Bunda
+# Transit
 
-[![Build Status](https://travis-ci.org/jsonmaur/bunda.svg?branch=master)](https://travis-ci.org/jsonmaur/bunda)
-[![Coverage Status](https://coveralls.io/repos/github/jsonmaur/bunda/badge.svg?branch=master)](https://coveralls.io/github/jsonmaur/bunda?branch=master)
+[![Build Status](https://travis-ci.org/jsonmaur/transit.svg?branch=master)](https://travis-ci.org/jsonmaur/transit)
+[![Coverage Status](https://coveralls.io/repos/github/jsonmaur/transit/badge.svg?branch=master)](https://coveralls.io/github/jsonmaur/transit?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 

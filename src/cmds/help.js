@@ -20,7 +20,7 @@ export const menus = {
   _default: `${chalk.dim(getLogo(2))}
   ${chalk.underline('Usage:')}
 
-    bunda <command> [options]
+    transit <command> [options]
 
   ${chalk.underline('Commands:')}
 

@@ -1,13 +1,13 @@
 {
-  "name": "bunda",
+  "name": "transit",
   "version": "0.1.0",
   "description": "A serverless web framework for Node and AWS Lambda",
   "author": "Jason Maurer",
   "license": "MIT",
-  "homepage": "https://github.com/jsonmaur/bunda#readme",
+  "homepage": "https://github.com/jsonmaur/transit#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsonmaur/bunda.git"
+    "url": "git+https://github.com/jsonmaur/transit.git"
   },
   "engines": {
     "node": ">=4"
@@ -22,7 +22,7 @@
   ],
   "main": "",
   "bin": {
-    "bunda": "bin/bunda"
+    "transit": "bin/transit"
   },
   "scripts": {
     "test:lint": "standard --verbose | snazzy",
